@@ -97,6 +97,7 @@ Ctrl-C never interrupts dpkg. An optional user service checks for security updat
 after login and after waking from sleep. It can install them unattended and push alerts
 to your phone via [ntfy](https://ntfy.sh). Never reboots.
 
+[![CI](https://img.shields.io/github/actions/workflow/status/clicraft/upall/ci.yml?label=CI&style=flat-square)](https://github.com/clicraft/upall/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/clicraft/upall?style=flat-square)](https://github.com/clicraft/upall/blob/main/LICENSE)
 
 ```sh
