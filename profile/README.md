@@ -79,4 +79,30 @@ curl -sSL https://raw.githubusercontent.com/clicraft/ghw-github-actions-watcher/
 
 ---
 
+### [`upall`](https://github.com/clicraft/upall) — update every package source at once
+
+One command for an Ubuntu-based desktop: **apt** (via nala), **Flatpak** and **Snap**
+update in parallel, then [topgrade](https://github.com/topgrade-rs/topgrade) handles
+user-level tools (rustup, pipx, uv, npm, VS Code extensions…).
+
+```sh
+upall check          # what is outdated, everywhere (read-only)
+upall                # update everything
+upall --tui          # same, as a live table: bars, speed, current package per source
+```
+
+Simulates the apt plan first and asks only when it removes packages or brings a kernel
+`/boot` can't hold. Takes a Timeshift snapshot before apt, and keeps Discover in sync.
+Ctrl-C never interrupts dpkg. An optional user service checks for security updates
+after login and after waking from sleep. It can install them unattended and push alerts
+to your phone via [ntfy](https://ntfy.sh). Never reboots.
+
+[![License](https://img.shields.io/github/license/clicraft/upall?style=flat-square)](https://github.com/clicraft/upall/blob/main/LICENSE)
+
+```sh
+git clone https://github.com/clicraft/upall.git && cd upall && ./install.sh
+```
+
+---
+
 *GPL-2.0-or-later / MIT throughout.*
